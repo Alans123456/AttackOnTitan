@@ -33,22 +33,8 @@ export default function Location() {
   };
 
   // Handle filter changes
-  const handleFilterChange = (e) => {
-    const { name, value } = e.target;
-    const newFilters = { ...filters, [name]: value };
-    setFilters(newFilters);
-    applyFilters(newFilters);
-  };
 
   // Apply filters to the locations list
-  const applyFilters = (filters) => {
-    let filtered = locations;
-
-    if (filters.region !== "All") {
-      filtered = filtered.filter((loc) => loc.region === filters.region);
-    }
-    setFilteredLocations(filtered);
-  };
 
   // Fallback image handler
   const handleImageError = (e) => {
@@ -64,22 +50,9 @@ export default function Location() {
       ) : (
         <>
           {/* Filter dropdown */}
-          <div className="flex flex-wrap gap-4 justify-center mb-10 p-6">
-            <select
-              name="region"
-              value={filters.region}
-              onChange={handleFilterChange}
-              className="bg-[#1c1c1c] text-white border border-red-600 p-2 rounded hover:border-red-500"
-            >
-              <option value="All">All Regions</option>
-              <option value="Region 1">Region 1</option>
-              <option value="Region 2">Region 2</option>
-              {/* Add other regions as needed */}
-            </select>
-          </div>
 
           {/* Location Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 p-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 p-10">
             {filteredLocations.map((loc) => {
               return (
                 <div
