@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 export default function NavBar() {
   const navItems = [
-    { name: "Home", path: "/" },
+    { name: "Home", path: "/Home" },
     { name: "Characters", path: "/Character" },
     { name: "Organization", path: "/Organization" },
     { name: "Location", path: "/Location" },
