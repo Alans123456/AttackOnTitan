@@ -38,18 +38,6 @@ export default function Organization() {
     applyFilters(newFilters);
   };
 
-  const applyFilters = (filters) => {
-    let filtered = organizations;
-
-    if (filters.type !== "All") {
-      filtered = filtered.filter((org) => org.type === filters.type);
-    }
-    if (filters.status !== "All") {
-      filtered = filtered.filter((org) => org.status === filters.status);
-    }
-    setFilteredOrganizations(filtered);
-  };
-
   const handleImageError = (e) => {
     e.target.src = "/placeholder.png"; // Fallback image
   };
@@ -64,30 +52,6 @@ export default function Organization() {
       ) : (
         <>
           {/* Filter dropdowns */}
-          <div className="flex flex-wrap gap-4 justify-center mb-10 p-6">
-            <select
-              name="type"
-              value={filters.type}
-              onChange={handleFilterChange}
-              className="bg-[#1c1c1c] text-white border border-red-600 p-2 rounded hover:border-red-500"
-            >
-              <option value="All">All Types</option>
-              <option value="Military">Military</option>
-              <option value="Civilian">Civilian</option>
-              <option value="Other">Other</option>
-            </select>
-
-            <select
-              name="status"
-              value={filters.status}
-              onChange={handleFilterChange}
-              className="bg-[#1c1c1c] text-white border border-red-600 p-2 rounded hover:border-red-500"
-            >
-              <option value="All">All Status</option>
-              <option value="Active">Active</option>
-              <option value="Inactive">Inactive</option>
-            </select>
-          </div>
 
           {/* Organization Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 p-4">
@@ -106,6 +70,7 @@ export default function Organization() {
                   <h3 className="text-xl font-bold text-red-600 mb-2">
                     {org.name}
                   </h3>
+                  <p className="text-sm">Affiliation: {org.affiliation}</p>
                 </div>
               </div>
             ))}
