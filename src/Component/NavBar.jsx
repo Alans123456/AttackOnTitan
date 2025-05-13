@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { FaUserCircle } from "react-icons/fa";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function NavBar() {
   const [username, setUsername] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     const usersData = localStorage.getItem("users");
@@ -11,10 +14,8 @@ export default function NavBar() {
     if (usersData) {
       try {
         const users = JSON.parse(usersData);
-        console.log("Users:", users); // Debugging log
-
         if (users.length > 0) {
-          setUsername(users[0].username); // Set the first user's username
+          setUsername(users[0].username);
         }
       } catch (error) {
         console.error("Failed to parse users from localStorage:", error);
@@ -31,6 +32,28 @@ export default function NavBar() {
     { name: "Contact", path: "/contact" },
   ];
 
+  const handleLogout = () => {
+    toast.success("Logout successful!", {
+      position: "top-right",
+      autoClose: 2000,
+      style: {
+        background: "#1a1a1a",
+        color: "#fff",
+      },
+      iconTheme: {
+        primary: "#f87171",
+        secondary: "#fff",
+      },
+    });
+
+    // Clear localStorage or any auth tokens if needed
+    // localStorage.removeItem("users");
+
+    setTimeout(() => {
+      navigate("/"); // Adjust path to your actual login page
+    }, 1000);
+  };
+
   return (
     <div className="flex justify-between items-center px-6 py-4 bg-[#1c1c1c] shadow-md sticky top-0 z-10">
       {/* Logo */}
@@ -42,7 +65,7 @@ export default function NavBar() {
       </div>
 
       {/* Nav Links */}
-      <div className="flex space-x-6">
+      <div className="flex space-x-6 items-center">
         {navItems.map((item) => (
           <NavLink
             key={item.name}
@@ -56,15 +79,21 @@ export default function NavBar() {
             {item.name}
           </NavLink>
         ))}
+
         {username && (
           <div className="flex items-center space-x-2 text-gray-300 ml-4 bg-[#2c2c2c] px-3 py-1 rounded-full">
             <FaUserCircle className="text-white text-2xl" />
             <span className="font-medium">{username}</span>
           </div>
         )}
-      </div>
 
-      {/* User Info */}
+        <button
+          onClick={handleLogout}
+          className="w-24 h-10 bg-red-600 text-white rounded-xl shadow-md transition-all duration-300 hover:bg-red-700 active:scale-95"
+        >
+          Logout
+        </button>
+      </div>
     </div>
   );
 }

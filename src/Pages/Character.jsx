@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import NavBar from "../Component/NavBar";
-import Loader from "../Component/Loader"; // Import the loader
+import Loader from "../Component/Loader"; // Loader component
 
 export default function CharacterCards() {
   const [characters, setCharacters] = useState([]);
@@ -10,17 +10,15 @@ export default function CharacterCards() {
     species: "All",
     status: "All",
   });
-  const [loading, setLoading] = useState(true); // Loading state
+  const [loading, setLoading] = useState(true);
 
-  // Fetch characters when the component mounts
   useEffect(() => {
     fetchCharacters();
   }, []);
 
-  // Fetch characters from API
   const fetchCharacters = async () => {
     try {
-      setLoading(true); // Set loading to true when fetching
+      setLoading(true);
       const response = await fetch(
         "https://api.attackontitanapi.com/characters"
       );
@@ -30,11 +28,10 @@ export default function CharacterCards() {
     } catch (error) {
       console.error("Error fetching characters:", error);
     } finally {
-      setLoading(false); // Set loading to false after fetching
+      setLoading(false);
     }
   };
 
-  // Handle filter changes
   const handleFilterChange = (e) => {
     const { name, value } = e.target;
     const newFilters = { ...filters, [name]: value };
@@ -42,7 +39,6 @@ export default function CharacterCards() {
     applyFilters(newFilters);
   };
 
-  // Apply filters to the characters list
   const applyFilters = (filters) => {
     let filtered = characters;
 
@@ -56,11 +52,6 @@ export default function CharacterCards() {
       filtered = filtered.filter((char) => char.status === filters.status);
     }
     setFilteredCharacters(filtered);
-  };
-
-  // Fallback image handler
-  const handleImageError = (e) => {
-    e.target.src = "/placeholder.png"; // Use the local placeholder image
   };
 
   return (
@@ -115,10 +106,14 @@ export default function CharacterCards() {
                 className="bg-[#1c1c1c] border-2 border-transparent hover:border-red-700 hover:shadow-red-500 hover:shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105"
               >
                 <img
-                  src={char.img || "/placeholder.png"} // Use the local placeholder image
+                  src={char.img}
                   alt={char.name}
                   className="w-full h-48 object-cover"
-                  onError={handleImageError} // Add error handling here
+                  onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src =
+                      "https://via.placeholder.com/300x200?text=No+Image";
+                  }}
                 />
                 <div className="p-4 text-center">
                   <h3 className="text-xl font-bold text-red-600 mb-2">
