@@ -7,7 +7,6 @@ export default function CharacterCards() {
   const [filteredCharacters, setFilteredCharacters] = useState([]);
   const [filters, setFilters] = useState({
     gender: "All",
-    species: "All",
     status: "All",
   });
   const [loading, setLoading] = useState(true);
@@ -23,6 +22,7 @@ export default function CharacterCards() {
         "https://api.attackontitanapi.com/characters"
       );
       const data = await response.json();
+      console.log("Fetched data:", data.results);
       setCharacters(data.results);
       setFilteredCharacters(data.results);
     } catch (error) {
@@ -43,14 +43,21 @@ export default function CharacterCards() {
     let filtered = characters;
 
     if (filters.gender !== "All") {
-      filtered = filtered.filter((char) => char.gender === filters.gender);
+      filtered = filtered.filter(
+        (char) =>
+          char.gender &&
+          char.gender.toLowerCase() === filters.gender.toLowerCase()
+      );
     }
-    if (filters.species !== "All") {
-      filtered = filtered.filter((char) => char.species === filters.species);
-    }
+
     if (filters.status !== "All") {
-      filtered = filtered.filter((char) => char.status === filters.status);
+      filtered = filtered.filter(
+        (char) =>
+          char.status &&
+          char.status.toLowerCase() === filters.status.toLowerCase()
+      );
     }
+
     setFilteredCharacters(filtered);
   };
 
@@ -62,7 +69,7 @@ export default function CharacterCards() {
         <Loader />
       ) : (
         <>
-          {/* Filter dropdowns */}
+          {/* Filter dropdowns (without species) */}
           <div className="flex flex-wrap gap-4 justify-center mb-10 p-6">
             <select
               name="gender"
@@ -73,17 +80,6 @@ export default function CharacterCards() {
               <option value="All">All Genders</option>
               <option value="Male">Male</option>
               <option value="Female">Female</option>
-            </select>
-
-            <select
-              name="species"
-              value={filters.species}
-              onChange={handleFilterChange}
-              className="bg-[#1c1c1c] text-white border border-red-600 p-2 rounded hover:border-red-500"
-            >
-              <option value="All">All Species</option>
-              <option value="Human">Human</option>
-              <option value="Titan">Titan</option>
             </select>
 
             <select
@@ -119,9 +115,8 @@ export default function CharacterCards() {
                   <h3 className="text-xl font-bold text-red-600 mb-2">
                     {char.name}
                   </h3>
-                  <p className="text-sm">Gender: {char.gender}</p>
-                  <p className="text-sm">Species: {char.species}</p>
-                  <p className="text-sm">Status: {char.status}</p>
+                  <p className="text-sm">Gender: {char.gender || "N/A"}</p>
+                  <p className="text-sm">Status: {char.status || "Unknown"}</p>
                 </div>
               </div>
             ))}
