@@ -104,7 +104,7 @@ export default function CharacterCards() {
                 <img
                   src={char.img}
                   alt={char.name}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-48 object-cover-fit"
                   onError={(e) => {
                     e.target.onerror = null;
                     e.target.src =

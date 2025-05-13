@@ -63,10 +63,10 @@ export default function SignUp() {
   };
 
   return (
-    <div className="min-h-screen flex justify-center items-center bg-gradient-to-b from-[#0f0f0f] to-[#1c1c1c] text-gray-100">
+    <div className="min-h-screen flex justify-center items-center bg-gradient-to-b hover:scale-105 hover:shadow-red-500 hover:shadow-lg from-[#0f0f0f] to-[#1c1c1c] text-gray-100">
       <div
         className={`relative w-[85%] sm:w-[400px] max-w-full ${
-          isFormVisible ? "min-h-[82vh]" : "h-[10vh]"
+          isFormVisible ? "min-h-[90vh]" : "h-[10vh]"
         } bg-[#1c1c1c] rounded-xl cursor-pointer transition-all duration-300 transform ${
           isFormVisible
             ? "hover:scale-100 hover:shadow-xl hover:border-red-700"

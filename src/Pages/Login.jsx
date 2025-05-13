@@ -46,7 +46,7 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen flex justify-center items-center bg-gradient-to-b from-[#0f0f0f] to-[#1c1c1c] text-gray-100">
+    <div className="min-h-screen flex justify-center items-center bg-gradient-to-b from-[#0f0f0f] hover:scale-105 hover:shadow-red-500 hover:shadow-lg to-[#1c1c1c] text-gray-100">
       <div
         className={`relative w-[85%] sm:w-[400px] max-w-full ${
           isFormVisible ? "h-[60vh]" : "h-[10vh]"
