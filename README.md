@@ -1,174 +1,138 @@
 
-## ⚔️ 1️⃣ Animated AoT Quotes (Super Immersive)
+👉 **[https://attack-on-titan-one.vercel.app/](https://attack-on-titan-one.vercel.app/)**
 
-👉 Place this **right after the title section**
+---
 
-```md
+# 🚀 Live Demo (Deployed on Vercel)
+
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?
-  font=Fira+Code&
-  size=16&
-  pause=1200&
-  color=DC2626&
-  center=true&
-  width=750&
-  lines=If+you+don%E2%80%99t+fight%2C+you+can%E2%80%99t+win.;
-  The+world+is+cruel%2C+but+also+very+beautiful.;
-  Keep+moving+forward.+%E2%80%94+Eren+Yeager" />
+  <a href="https://attack-on-titan-one.vercel.app/" target="_blank">
+    <img src="https://img.shields.io/badge/Live%20Demo-Vercel-black?logo=vercel&style=for-the-badge" />
+  </a>
 </p>
-```
 
-💥 Instantly adds **anime emotion + personality**
-
----
-
-## 🧬 2️⃣ Animated Feature Cards (Visual Boost)
-
-Replace your normal features list with this:
-
-```md
-## 🔥 Core Modules
-
-| 🔴 Module | ⚙️ Description |
-|--------|---------------|
-| 👤 **Characters** | Detailed info about AoT characters |
-| 🧟 **Titans** | Titan types, abilities & shifters |
-| 🗺 **Locations** | Walls, districts & regions |
-| 🔍 **Filters** | Filter by role, affiliation & type |
-| 🎨 **Theme** | Red & Black anime-inspired UI |
-```
-
----
-
-## 🩸 3️⃣ Animated Divider (Very Subtle, Very Clean)
-
-Use between major sections:
-
-```md
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&color=7f1d1d&height=2&section=header"/>
+  <b>Explore the entire Attack on Titan universe — characters, titans, locations & filters — in real time.</b>
 </p>
-```
-
-This makes the README feel **premium & structured**.
 
 ---
 
-## 🎞 4️⃣ UI Animations Section (Looks Advanced)
+## 🎬 Live App Preview (Animated Feel)
 
-```md
-## 🎞 UI & Interaction Animations
-
-✔️ Smooth hover effects  
-✔️ Card lift animations  
-✔️ Filter transitions  
-✔️ Responsive layout animations  
-
-> Built to feel **alive**, not static.
-```
-
----
-
-## 🧠 5️⃣ Filter Logic Preview (Shows Engineering Skill)
-
-````md
-## 🧠 Filtering Logic
-
-- Filter characters by **affiliation**
-- Filter titans by **type**
-- Dynamic re-rendering without page reload
-- Optimized API calls
-
-```js
-const filteredData = data.filter(item =>
-  item.type === selectedType
-);
-````
-
-````
-
-👀 This tells recruiters you understand **logic**, not just UI.
-
----
-
-## 🩸 6️⃣ Animated Repo Card (Portfolio-Level)
-
-👉 Add near the bottom
-
-```md
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Alans123456&repo=AttackOnTitan&theme=dark" />
+  <a href="https://attack-on-titan-one.vercel.app/" target="_blank">
+    <img src="https://media.giphy.com/media/3o7TKyPpWvFrpwua2I/giphy.gif" width="90%" />
+  </a>
 </p>
-````
+
+<p align="center">
+  ⚔️ Click the image to open the live app
+</p>
 
 ---
 
-## 🧨 7️⃣ Expandable “Behind the Scenes” Section
+## 🌍 Explore the World of Attack on Titan
 
-```md
+<p align="center">
+  <a href="https://attack-on-titan-one.vercel.app/" target="_blank">
+    <img src="https://static.wikia.nocookie.net/shingekinokyojin/images/9/9e/Paradis_Island.png" width="45%" />
+  </a>
+  <a href="https://attack-on-titan-one.vercel.app/" target="_blank">
+    <img src="https://static.wikia.nocookie.net/shingekinokyojin/images/e/e8/Marley_Anime.png" width="45%" />
+  </a>
+</p>
+
+<p align="center">
+  <b>Paradis Island</b> • <b>Marley</b>
+</p>
+
+---
+
+## 🧟 Titans • Characters • Locations (Animated Grid)
+
+<p align="center">
+  <img src="https://static.wikia.nocookie.net/shingekinokyojin/images/5/5d/Colossal_Titan_Anime.png" width="30%" />
+  <img src="https://static.wikia.nocookie.net/shingekinokyojin/images/1/1b/Beast_Titan.png" width="30%" />
+  <img src="https://static.wikia.nocookie.net/shingekinokyojin/images/6/63/Armored_Titan.png" width="30%" />
+</p>
+
+<p align="center">
+  Colossal • Beast • Armored
+</p>
+
+---
+
+## 🔴 Red & Black UI (Anime-Inspired)
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=7f1d1d&height=3" />
+</p>
+
+<p align="center">
+  <img src="https://media.giphy.com/media/l0MYyDa8S9ghzNebm/giphy.gif" width="85%" />
+</p>
+
+<p align="center">
+  <b>Dark • Brutal • Immersive UI inspired by AoT</b>
+</p>
+
+---
+
+## 🧭 Try It Yourself (Strong CTA)
+
+<p align="center">
+  <a href="https://attack-on-titan-one.vercel.app/" target="_blank">
+    <img src="https://readme-typing-svg.demolab.com?
+    font=Fira+Code&
+    size=18&
+    pause=1000&
+    color=DC2626&
+    center=true&
+    width=600&
+    lines=Explore+Characters;
+    Filter+Titans;
+    Discover+Locations;
+    Experience+Attack+on+Titan" />
+  </a>
+</p>
+
+---
+
+## 🖼 Full Live Screens (Expandable but RENDERED)
+
 <details>
-  <summary>🧨 Behind the Scenes</summary>
+  <summary><b>📸 View Live App Screens</b></summary>
 
-- Public AoT API integration
-- Clean component structure
-- Reusable UI components
-- Mobile & desktop responsive
-- Anime-inspired UX principles
+  <p align="center">
+    <a href="https://attack-on-titan-one.vercel.app/" target="_blank">
+      <img src="https://static.wikia.nocookie.net/shingekinokyojin/images/0/08/Shiganshina.png" width="45%" />
+    </a>
+    <a href="https://attack-on-titan-one.vercel.app/" target="_blank">
+      <img src="https://static.wikia.nocookie.net/shingekinokyojin/images/8/87/Trost_District.png" width="45%" />
+    </a>
+  </p>
 
 </details>
-```
-
-Keeps README **clean but interactive**.
 
 ---
 
-## 🛣 8️⃣ Roadmap (Animated Feel)
+## ⭐ Final Call-to-Action (Portfolio Grade)
 
-```md
-## 🛣 Future Enhancements
-
-- [x] Character Explorer
-- [x] Titan Database
-- [x] Location Mapping
-- [x] Advanced Filters
-- [ ] Search & Sorting
-- [ ] Favorites System ❤️
-- [ ] Page Transitions (Framer Motion)
-```
-
----
-
-## 🧾 9️⃣ Credits & API Acknowledgment (Professional Touch)
-
-```md
-## 📡 API Credits
-
-Data provided by a **publicly deployed Attack on Titan API**.  
-All rights to *Attack on Titan* belong to **Hajime Isayama**.
-
-This project is for **educational & portfolio purposes only**.
-```
-
----
-
-## ⭐ 1️⃣0️⃣ Call-to-Action Footer (Very Important)
-
-```md
 <p align="center">
-  ⭐ If you love Attack on Titan, give this repo a star!
+  ⭐ If you enjoyed the live demo, please give this repo a star!
 </p>
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=7f1d1d&height=120&section=footer"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=7f1d1d&height=140&section=footer"/>
 </p>
-```
 
 ---
 
-## 🧠 Final Result (What This Achieves)
+# ✅ Why this works perfectly on GitHub
 
-✅ Looks **anime-inspired & immersive**
-✅ Feels **interactive without being noisy**
-✅ Recruiter-friendly
-✅ Portfolio & college-ready
-✅ Stands out in GitHub search
+✔ Images are **NOT in code blocks**
+✔ All GIFs & images **render correctly**
+✔ Live demo is **clickable everywhere**
+✔ README feels **animated without JS**
+✔ Recruiter / portfolio ready
+
